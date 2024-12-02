@@ -13,6 +13,7 @@ x = data["Age"].values
 y = data["Blood Pressure"].values
 
 x = x.reshape(-1,1)
+xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size = .2)
 
 # Create the model
 model = LinearRegression().fit(x, y)
@@ -32,7 +33,6 @@ print(f"R Squared value: {r_squared}")
 '''
 # reshape the xtest data into a 2D array
 xtest = xtest.reshape(-1,1)
-xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size = .2)
 
 # get the predicted y values for the xtest values - returns an array of the results
 predict = model.predict(xtest)

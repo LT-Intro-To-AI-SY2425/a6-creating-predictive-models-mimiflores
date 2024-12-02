@@ -32,6 +32,8 @@ print(f"R Squared value: {r_squared}")
 '''
 # reshape the xtest data into a 2D array
 xtest = xtest.reshape(-1,1)
+xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size = .2)
+
 # get the predicted y values for the xtest values - returns an array of the results
 predict = model.predict(xtest)
 # round the value in the np array to 2 decimal places

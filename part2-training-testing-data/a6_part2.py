@@ -57,9 +57,9 @@ plt.scatter(xtest, ytest, c="blue", label="Testing Data")
 
 plt.scatter(xtest, predict, c="red", label="Predictions")
 
-plt.xlabel("Temperature ºF")
-plt.ylabel("Chirps per Minute")
-plt.title("Cricket Chirps by Temperature")
+plt.xlabel("Age")
+plt.ylabel("Blood Pressure")
+plt.title("Blood Pressure by Age")
 plt.plot(x, coef*x + intercept, c="r", label="Line of Best Fit")
 
 plt.legend()

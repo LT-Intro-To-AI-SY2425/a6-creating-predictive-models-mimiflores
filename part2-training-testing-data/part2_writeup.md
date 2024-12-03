@@ -8,7 +8,7 @@ After completing `a6_part2.py` answer the following questions
 
 
 2. What does the R squared coefficient tell you about the model?
-r squared of the variation in blood pressure can be explained by the linear relationship with age. 
+62.6% of the variation in blood pressure can be explained by the linear relationship with age. 
 
 
 3. Would you say that your model is accurate? What evidence supports your conclusion? Consider the meaning of the predicted and actual values in the context of the chart below from the American Heart Association’s website on understanding blood pressure.

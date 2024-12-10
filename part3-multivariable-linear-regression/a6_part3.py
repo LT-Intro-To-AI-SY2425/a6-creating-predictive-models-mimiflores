@@ -22,6 +22,19 @@ r_squared = round(model.score(x, y),2)
 print(f"Model's Linear Equation: y={coef[0]}x1 + {coef[1]}x2 + {coef[2]}x3 + {intercept}")
 print("R Squared value:", r_squared)
 
+miles = 150000
+age = 20
+year = 2024 - age  
+
+# Prepare the input array with the same structure as the training data
+input_data = np.array([[miles, age, year]])
+
+# Make the prediction using the trained model
+predicted_price = model.predict(input_data)
+
+# Output the predicted price
+print(f"The predicted price for a {age}-year-old car with {miles} miles (model year {year}) is ${predicted_price[0]:,.2f}.")
+
 #Loop through the data and print out the predicted prices and the 
 #actual prices
 print("***************")

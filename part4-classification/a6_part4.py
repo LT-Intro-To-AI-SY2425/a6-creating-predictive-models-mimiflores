@@ -51,3 +51,17 @@ for index in range(len(x_test)):
         actual = "Female"
     print("Predicted Gender: " + y_pred + " Actual Gender : " + actual)
     print("")
+
+new_data = [[34, 56000, 1]]  # 1 corresponds to Female
+
+# Step 2: Standardize the new data using the same scaler
+new_data_scaled = scaler.transform(new_data)
+
+# Step 3: Predict if she would buy the SUV
+prediction = model.predict(new_data_scaled)
+
+# Step 4: Output the prediction
+if prediction == 0:
+    print("The 34-year-old Female who makes $56,000 a year will not buy the SUV.")
+else:
+    print("The 34-year-old Female who makes $56,000 a year will buy the SUV.")
